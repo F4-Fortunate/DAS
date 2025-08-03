@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations for pricing page notice */
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+@keyframes bounce-gentle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out infinite;
+}
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    --purple-hsl: 270, 100%, 50%;
+    --purple-rgb: 63, 65, 166, 1;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom hover effects */
+@layer components {
+  .hover-scale {
+    @apply transform transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-lift {
+    @apply transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+}
+
+.btn {
+  background-color: rgba(var(--purple-rgb));
+}
+
+/* .header-btn {
+  border-color: rgb(44, 14, 168);
+  border: 2px solid rgb(44, 14, 168);
+  color: rgb(44, 14, 168);
+  font-size: 0.7rem;
+} */
+
+.cta {
+  background-color: rgb(44, 14, 168);
+  border-radius: 40px;
+  height: 28.5rem;
+  justify-content: center;
+  gap: 1.8rem;
+  transition: all 0.3s ease-in-out;
+}
+.gitBtn {
+  transition: all 0.5s ease-in-out;
+  background-color: rgb(245, 245, 255);
+  color: rgb(44, 14, 168);
+}
+
+.gitBtnIcon {
+  background-color: rgb(44, 14, 168);
+}
+.gitBtn:hover {
+  /* background-color: rgb(44, 14, 168) !important;
+  color: white; */
+  border: 1px solid rgb(44, 14, 168);
+  scale: 1.02;
+}
+
+.vmBtn {
+  transition: all 0.5s ease-in-out;
+  background-color: rgb(44, 14, 168);
+  color: rgb(245, 245, 255);
+}
+
+.vmBtn:hover {
+  /* background-color: rgb(44, 14, 168) !important;
+  color: white; */
+  border: 1px solid rgb(44, 14, 168);
+  scale: 1.02;
+  color: rgb(44, 14, 168);
+}
+
+.gitImgHover {
+  background-color: rgb(251, 251, 251);
+  color: rgb(44, 14, 168);
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+h1 {
+  letter-spacing: 0.2rem;
+}
+
+p {
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  word-spacing: 0px;
+  letter-spacing: 2px;
+}
+
+.icon {
+  color: rgba(var(--purple-rgb));
+}
+
+.imgbtn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  display: block;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.imgbtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.05);
+  background-color: rgba(var(--purple-rgb));
+}
+
+.banner {
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+  display: block;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.banner {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.05);
+  background-color: white;
+}
+
+.icon {
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.portfolio_Image {
+  transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1),
+    box-shadow 0.8s ease-in-out, filter 0.9s ease-in-out;
+}
+
+.portfolio_Image:hover {
+  filter: brightness(1.1);
+  transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), 0.8s ease-in-out,
+    filter 0.9s ease-in-out;
+}
+.portfolio_containter {
+  transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), 0.8s ease-in-out,
+    filter 0.9s ease-in-out;
+  /* border-radius: 0.8rem; */
+}
+.portfolio_containter:hover {
+  transform: scale(1.01);
+  transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1),
+    box-shadow 0.8s ease-in-out, filter 0.9s ease-in-out;
+}
+
+.img-containter {
+  height: 70%;
+}
+
+.msImg2Con {
+  transform: translateY(-6.5rem);
+}
+.msImg {
+  transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1),
+    box-shadow 0.8s ease-in-out, filter 0.9s ease-in-out;
+}
+.msImg:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+  transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), 0.8s ease-in-out,
+    filter 0.9s ease-in-out;
+}
+
+.msImg3Con {
+  transform: translateY(-16.5rem);
+}
