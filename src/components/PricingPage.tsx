@@ -391,11 +391,12 @@ const PricingPage = () => {
                         <h3 className="text-xl font-bold text-white mb-2">
                           {package_.title}
                         </h3>
-                        {package_.subtitle && (
+                        {"subtitle" in package_ && package_.subtitle && (
                           <p className="text-sm text-gray-200 mb-2">
                             {package_.subtitle}
                           </p>
                         )}
+
                         <div className="text-2xl font-bold text-white">
                           {package_.price}
                         </div>
