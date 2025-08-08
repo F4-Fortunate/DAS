@@ -20,7 +20,7 @@ const ProcessSection = () => {
             <img
               src={flowerImg}
               alt="img"
-              className="w-full h-auto max-w-md sm:max-w-lg lg:max-w-full mx-auto lg:mx-0 grayscale"
+              className="w-full h-auto max-w-md sm:max-w-lg lg:max-w-full mx-auto lg:mx-0 grayscale rounded-xl"
             />
           </div>
           <div className="space-y-6 order-1 lg:order-2">
