@@ -1,6 +1,6 @@
 import React from "react";
 import button from "../images/HeroSection/Group 3.svg";
-import flowerImg from "../images/ProcessSection/Group 4.svg";
+import flowerImg from "../images/ProcessSection/Group 4.jpg";
 
 const ProcessSection = () => {
   const handleWhatsAppNav = () => {
@@ -19,8 +19,8 @@ const ProcessSection = () => {
           <div className="order-2 lg:order-1">
             <img
               src={flowerImg}
-              alt="flower"
-              className="w-full h-auto max-w-md sm:max-w-lg lg:max-w-full mx-auto lg:mx-0"
+              alt="img"
+              className="w-full h-auto max-w-md sm:max-w-lg lg:max-w-full mx-auto lg:mx-0 grayscale"
             />
           </div>
           <div className="space-y-6 order-1 lg:order-2">
