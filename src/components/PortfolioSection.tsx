@@ -59,11 +59,14 @@ const PortfolioSection = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {portfolioImages.map((image, index) => (
-            <div key={index} className="group portfolio_containter">
+            <div
+              key={index}
+              className="group portfolio_containter flex justify-center"
+            >
               <img
                 src={image}
                 alt={`Portfolio ${index + 1}`}
-                className="portfolio_Image h-72 sm:h-80 lg:h-96 w-full lg:w-auto object-cover lg:object-contain transition-transform duration-500 ease-out"
+                className="portfolio_Image h-96 w-full sm:w-80 lg:w-auto object-cover lg:object-contain transition-transform duration-500 ease-out"
                 loading="lazy"
                 decoding="async"
               />

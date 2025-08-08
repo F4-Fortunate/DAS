@@ -39,6 +39,11 @@ const TermsPage = () => {
         "If the Client shall cancel this Agreement more than six (6) calendar days before the photo shooting day, any booking fee paid to the Photographer shall be refunded in full if Dotun Ajayi is able to re-book the same date. If the Photographer is NOT able to secure another client for the date, or if the cancellation occurs less than six (6) calendar days before the portrait date, the Client forfeits the booking fee.",
     },
     {
+      title: "Ideal Timeline",
+      content:
+        "4-6 weeks after the wedding is considered a professional and client-friendly window",
+    },
+    {
       title: "Photographic Materials and Copyright",
       content:
         "All photographic materials, such as original negatives, photos, or slides, shall be the exclusive property of the Photographer. The Photographer shall own the copyright in all images created and may use the work for samples, contests, exhibition, advertising and self-promotion. Usage outside the bounds of this agreement will require the Client's consent.",

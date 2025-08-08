@@ -26,8 +26,8 @@ const Header = () => {
             className="text-lg sm:text-xl font-bold text-gray-900 hover:text-violet-800 transition-colors"
             onClick={closeMenu}
           >
-            <span className="hidden sm:inline">DotunAjayi Studios</span>
-            <span className="sm:hidden">DA Studios</span>
+            <span className="hidden sm:inline">DotunAjayiStudios</span>
+            <span className="sm:hidden">DotunAjayiStudios</span>
           </Link>
 
           {/* Desktop Navigation */}

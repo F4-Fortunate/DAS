@@ -35,7 +35,7 @@ const PricingPage = () => {
 
   const selectCategory = (categoryId: string) => {
     setActiveCategory(categoryId);
-    setIsMobileSidebarOpen(false); // Close mobile sidebar after selection
+    setIsMobileSidebarOpen(false); 
   };
 
   const categories = [
@@ -72,51 +72,28 @@ const PricingPage = () => {
     ],
     weddings: [
       {
-        title: "SAPPHIRE PACKAGE",
-        subtitle: "VIDEOGRAPHY AND PHOTOGRAPHY",
-        price: "₦1,000,000",
-        features: [
-          "1 Drone",
-          "2 full frame cameras",
-          "2 photographers",
-          "2 Videographers",
-          "Pre wedding thriller",
-          "2 wedding thriller video",
-          "A 12*30 synthetic photobook with a case",
-          "Calendar with a mini book",
-          "14*14 Acrylic frame",
-          "16*20 frame",
-          "Full Wedding pictures & Video all inside two 32 Gig flash drive",
-        ],
-      },
-
-      {
-        title: "GOLD PACKAGE",
-        subtitle: "VIDEOGRAPHY AND PHOTOGRAPHY",
-        price: "₦850,000",
-        features: [
-          "2 full frame cameras",
-          "2 photographers",
-          "Pre wedding thriller",
-          "1 wedding thriller video",
-          "A 12*30 synthetic photobook with a case",
-          "Calendar with a mini book",
-          "16*20 frame",
-          "Full Wedding pictures & Video all inside a 32 Gig flash drive",
-        ],
-      },
-      {
         title: "SILVER PACKAGE",
-        subtitle: "VIDEOGRAPHY AND PHOTOGRAPHY",
-        price: "₦700,000",
+        subtitle: "PHOTOGRAPHY ONLY",
+        price: "₦600,000",
         features: [
           "1 Full frame camera",
           "1 photographer",
-          "1 Videographer",
-          "1 Wedding thriller",
           "12*30 synthetic photobook with a box",
-          "with a calendar 14*14 frame",
+          "With a calendar 14*14 frame",
           "Full Wedding pictures in a Flash Drive",
+        ],
+      },
+      {
+        title: "GOLD PACKAGE",
+        subtitle: "PHOTOGRAPHY ONLY",
+        price: "₦750,000",
+        features: [
+          "2 full frame cameras",
+          "2 photographers",
+          "12*30 synthetic photobook with a box",
+          "A calendar",
+          "16*20 frame",
+          "Full Wedding pictures all in a 16Gig flash Drive",
         ],
       },
       {
@@ -134,29 +111,50 @@ const PricingPage = () => {
         ],
       },
       {
-        title: "GOLD PACKAGE",
-        subtitle: "PHOTOGRAPHY ONLY",
-        price: "₦750,000",
-        features: [
-          "2 full frame cameras",
-          "2 photographers",
-          "12*30 synthetic photobook with a box",
-          "A calendar",
-          "16*20 frame",
-          "Full Wedding pictures all in a 16Gig flash Drive",
-        ],
-      },
-
-      {
         title: "SILVER PACKAGE",
-        subtitle: "PHOTOGRAPHY ONLY",
-        price: "₦600,000",
+        subtitle: "VIDEOGRAPHY AND PHOTOGRAPHY",
+        price: "₦700,000",
         features: [
           "1 Full frame camera",
           "1 photographer",
+          "1 Videographer",
+          "1 Wedding thriller",
           "12*30 synthetic photobook with a box",
-          "With a calendar 14*14 frame",
+          "with a calendar 14*14 frame",
           "Full Wedding pictures in a Flash Drive",
+        ],
+      },
+      {
+        title: "GOLD PACKAGE",
+        subtitle: "VIDEOGRAPHY AND PHOTOGRAPHY",
+        price: "₦850,000",
+        features: [
+          "2 full frame cameras",
+          "2 photographers",
+          "Pre wedding thriller",
+          "1 wedding thriller video",
+          "A 12*30 synthetic photobook with a case",
+          "Calendar with a mini book",
+          "16*20 frame",
+          "Full Wedding pictures & Video all inside a 32 Gig flash drive",
+        ],
+      },
+      {
+        title: "SAPPHIRE PACKAGE",
+        subtitle: "VIDEOGRAPHY AND PHOTOGRAPHY",
+        price: "₦1,000,000",
+        features: [
+          "1 Drone",
+          "2 full frame cameras",
+          "2 photographers",
+          "2 Videographers",
+          "Pre wedding thriller",
+          "2 wedding thriller video",
+          "A 12*30 synthetic photobook with a case",
+          "Calendar with a mini book",
+          "14*14 Acrylic frame",
+          "16*20 frame",
+          "Full Wedding pictures & Video all inside two 32 Gig flash drive",
         ],
       },
     ],
