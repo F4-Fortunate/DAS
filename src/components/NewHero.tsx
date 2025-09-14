@@ -17,7 +17,7 @@ const NewHeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-4 2xl:pb-0">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-28 md:pt-32 lg:pt-36 xl:pt-40 2xl:pt-0">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
