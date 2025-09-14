@@ -16,9 +16,9 @@ const ExperimentsSection = () => {
               className="w-full h-auto max-w-md sm:max-w-lg lg:max-w-full mx-auto lg:mx-0"
             />
           </div>
-          <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
+          <div className="space-y-12 sm:space-y-8 order-1 lg:order-2">
             <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 text-left">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight text-left">
                 <span className="block sm:hidden">
                   Experiments and clients projects.
                 </span>

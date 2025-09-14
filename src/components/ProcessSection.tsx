@@ -15,9 +15,9 @@ const ProcessSection = () => {
               className="w-full h-auto max-w-md sm:max-w-lg lg:max-w-full mx-auto lg:mx-0 grayscale rounded-xl"
             />
           </div>
-          <div className="space-y-10 order-1 lg:order-2">
-            <div className="space-y-7">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 text-left">
+          <div className="space-y-12 order-1 lg:order-2 mt-0">
+            <div className="space-y-8">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tighttext-left">
                 <span className="block sm:hidden">How we make it happen</span>
                 <span className="hidden sm:block">
                   How we make it

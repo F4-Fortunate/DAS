@@ -45,7 +45,7 @@ const CTASection = () => {
           ref={ctaRef}
           className="cta bg-black text-white flex flex-col p-6 sm:p-8 lg:p-12 rounded-2xl"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-center lg:text-left">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight text-left">
             Get Started With Us
           </h2>
           <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90 max-w-2xl text-center lg:text-left mx-auto lg:mx-0">

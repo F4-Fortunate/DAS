@@ -16,7 +16,7 @@ const MomentsSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="space-y-8 sm:space-y-12 lg:space-y-16">
           <div className="space-y-6 max-w-xl">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 text-left">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-gray-900 leading-tight text-left">
               <span className="block sm:hidden">
                 Celebrating Your Most Important Moments
               </span>

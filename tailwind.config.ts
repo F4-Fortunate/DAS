@@ -91,8 +91,10 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        sans: ['"Quicksand"', "system-ui", "sans-serif"],
-        quicksand: ['"Quicksand"', "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        quicksand: ["Quicksand", "sans-serif"],
+        sourceSans: ["Source Sans 3", "sans-serif"],
+        herrVon: ["Herr Von Muellerhoff", "cursive"],
       },
     },
   },

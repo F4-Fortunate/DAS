@@ -1,5 +1,6 @@
 import heroImage from "../images/HeroSection/hero.png";
 import { useNavigate } from "react-router-dom";
+import { Camera } from "lucide-react";
 const NewHeroSection = () => {
   const navigate = useNavigate();
   const handleViewServices = () => {
@@ -31,10 +32,10 @@ const NewHeroSection = () => {
         <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
           Your Moments, Our Focus
           <br />
-          <span className="text-gray-200">Captured With Care</span>
+          <span className="text-gray-200 ">Captured With Care</span>
         </h1>
 
-        <p className="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-4xl lg:text-5xl text-gray-200 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed font-herrVon">
           Professional photography that tells your story with premium artistry
         </p>
 
@@ -58,9 +59,10 @@ const NewHeroSection = () => {
       </div>
 
       <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce pb-3">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+        {/* <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
-        </div>
+        </div> */}
+        <Camera className="w-12 h-auto text-white" />
       </div>
     </section>
   );
