@@ -19,10 +19,9 @@ const PricingPage = () => {
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
-  const handleWhatsAppNav = (service, packageType) => {
+  const handleWhatsAppNav = (service: string, packageType: string) => {
     const phoneNumber = "+2349027104215";
-    const message =
-      `Hi there!!! Mr Dotun Ajayi. \nI would like to make an enquiry about your: ${service} shoot... ${packageType}.`;
+    const message = `Hi there!!! Mr Dotun Ajayi. \nI would like to make an enquiry about your: ${service} shoot... ${packageType}.`;
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
       "_blank"
@@ -420,7 +419,13 @@ const PricingPage = () => {
                       </ul>
 
                       <button
-                        onClick={handleWhatsAppNav()}
+                        onClick={() =>
+                          handleWhatsAppNav(
+                            categories.find((cat) => cat.id === activeCategory)
+                              ?.name || "",
+                            package_.title
+                          )
+                        }
                         className="w-full bg-white text-black font-semibold py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors"
                       >
                         Make a Reservation
