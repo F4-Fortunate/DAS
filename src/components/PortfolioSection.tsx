@@ -78,15 +78,16 @@ const PortfolioSection = () => {
         <button
           type="button"
           onClick={() => navigate("/photos")}
-          className="vmBtn bg-violet-900 flex items-center justify-center align-middle gap-3 sm:gap-5 text-white hover:text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold transition-colors w-64 sm:w-80 h-16 sm:h-20"
+          className="bg-black text-white w-72 h-20 px-10 sm:px-10 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-900 transition-all duration-1000 hover:scale-105 shadow-lg"
         >
           View More
-          <img
+          {/* <img
             src={Component}
             alt="Component"
-            className="gitBtnIcon w-4 sm:w-5 h-4 sm:h-5 bg-white p-1 rounded-full"
-          />
+            className="gitBtnIcon w-4 sm:w-5 h-4 sm:h-5 bg-gray-500 p-1 mt-1 rounded-full"
+          /> */}
         </button>
+        
       </div>
     </section>
   );

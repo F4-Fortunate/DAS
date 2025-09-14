@@ -9,21 +9,17 @@ import MomentsSection from "../components/MomentsSection";
 import PortfolioSection from "../components/PortfolioSection";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
-import Chat from "../components/Chat";
+import NewHeroSection from "../components/NewHero";
 const Index = () => {
   const location = useLocation();
 
-  // Force fresh page load behavior
   useEffect(() => {
-    // Scroll to top immediately
     window.scrollTo(0, 0);
 
-    // Force a small delay to ensure clean rendering like a page reload
     const timer = setTimeout(() => {
       window.scrollTo(0, 0);
-      // Force re-render of all child components
       document.body.style.display = "none";
-      document.body.offsetHeight; // Trigger reflow
+      document.body.offsetHeight; 
       document.body.style.display = "";
     }, 10);
 
@@ -32,7 +28,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* <Chat /> */}
+      <NewHeroSection/>
       <Header />
       <HeroSection />
       <ProcessSection />

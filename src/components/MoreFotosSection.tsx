@@ -46,7 +46,6 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-
 const OptimizedImage = ({
   src,
   alt,
@@ -74,18 +73,16 @@ const OptimizedImage = ({
 
 const PhotosSection = () => {
   const location = useLocation();
-
-  // Force fresh page load behavior
+ const handleInstagramNav = () => {
+   window.open("https://www.instagram.com/dotunajayistudios/", "_blank");
+ };
   useEffect(() => {
-    // Scroll to top immediately
     window.scrollTo(0, 0);
-
-    // Force a small delay to ensure clean rendering like a page reload
     const timer = setTimeout(() => {
       window.scrollTo(0, 0);
-      // Force re-render of all child components
+
       document.body.style.display = "none";
-      document.body.offsetHeight; // Trigger reflow
+      document.body.offsetHeight; 
       document.body.style.display = "";
     }, 10);
 
@@ -205,6 +202,16 @@ const PhotosSection = () => {
               ))}
             </div>
           </div>
+
+          <div className="flex justify-center">
+                <button
+                  type="button"
+                  onClick={handleInstagramNav}
+                  className="bg-black text-white w-72 h-20 px-10 sm:px-10 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-900 transition-all duration-1000 hover:scale-105 shadow-lg"
+                >
+                  View More
+                </button>
+              </div>
         </div>
       </section>
       <Footer />

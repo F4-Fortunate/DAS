@@ -5,12 +5,12 @@ import Index from "./pages/Index";
 import PhotosSection from "./components/MoreFotosSection";
 import PricingPage from "./components/PricingPage";
 import TermsPage from "./components/TermsPage";
+import FAQ from "./components/FAQs";
 import "./index.css";
 
 function App() {
   const location = useLocation();
 
-  // Generate unique key for each navigation to force complete re-mount
   const getUniqueKey = (path: string) => {
     return `${path}-${Date.now()}-${Math.random()}`;
   };
@@ -32,6 +32,10 @@ function App() {
       <Route
         path="/terms"
         element={<TermsPage key={getUniqueKey(location.pathname)} />}
+      />
+      <Route
+        path="/faq"
+        element={<FAQ key={getUniqueKey(location.pathname)} />}
       />
     </Routes>
   );

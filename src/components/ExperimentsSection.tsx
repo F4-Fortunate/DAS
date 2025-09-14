@@ -18,7 +18,7 @@ const ExperimentsSection = () => {
           </div>
           <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
             <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 text-left">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 text-left">
                 <span className="block sm:hidden">
                   Experiments and clients projects.
                 </span>
@@ -36,13 +36,12 @@ const ExperimentsSection = () => {
               </p>
             </div>
             <div className="flex justify-start">
-              <button type="button" className="bg-transparent border-none p-0">
-                <img
-                  onClick={handleInstagramNav}
-                  src={button}
-                  alt="btn"
-                  className="w-auto h-12 sm:h-14 lg:h-16"
-                />
+              <button
+                type="button"
+                onClick={handleInstagramNav}
+                className="bg-black text-white w-72 h-20 px-10 sm:px-10 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-900 transition-all duration-1000 hover:scale-105 shadow-lg"
+              >
+                Get Started
               </button>
             </div>
           </div>

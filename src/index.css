@@ -33,13 +33,9 @@
   animation: bounce-gentle 2s ease-in-out infinite;
 }
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 90%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -159,7 +155,7 @@ html {
 } */
 
 .cta {
-  background-color: rgb(44, 14, 168);
+  /* background-color: rgb(44, 14, 168); */
   border-radius: 40px;
   height: 28.5rem;
   justify-content: center;
@@ -169,31 +165,31 @@ html {
 .gitBtn {
   transition: all 0.5s ease-in-out;
   background-color: rgb(245, 245, 255);
-  color: rgb(44, 14, 168);
+  /* color: rgb(44, 14, 168); */
 }
 
 .gitBtnIcon {
-  background-color: rgb(44, 14, 168);
+  /* background-color: rgb(44, 14, 168); */
 }
 .gitBtn:hover {
   /* background-color: rgb(44, 14, 168) !important;
   color: white; */
-  border: 1px solid rgb(44, 14, 168);
+  border: 1px solid rgb(106, 106, 107);
   scale: 1.02;
 }
 
 .vmBtn {
   transition: all 0.5s ease-in-out;
-  background-color: rgb(44, 14, 168);
+  /* background-color: rgb(44, 14, 168); */
   color: rgb(245, 245, 255);
 }
 
 .vmBtn:hover {
   /* background-color: rgb(44, 14, 168) !important;
   color: white; */
-  border: 1px solid rgb(44, 14, 168);
+  border: 1px solid rgb(131, 131, 131);
   scale: 1.02;
-  color: rgb(44, 14, 168);
+  /* color: rgb(44, 14, 168); */
 }
 
 .gitImgHover {

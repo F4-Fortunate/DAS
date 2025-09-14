@@ -12,11 +12,11 @@ const MomentsSection = () => {
       );
     };
   return (
-    <section className="py-12 sm:py-16 lg:py-28 px-4 sm:px-6 lg:px-20 bg-gray-50">
+    <section className="py-12 sm:py-16 lg:py-28 px-4 sm:px-6 lg:px-20 bg-gray-200">
       <div className="max-w-7xl mx-auto">
         <div className="space-y-8 sm:space-y-12 lg:space-y-16">
           <div className="space-y-6 max-w-xl">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 text-left">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 text-left">
               <span className="block sm:hidden">
                 Celebrating Your Most Important Moments
               </span>
@@ -32,13 +32,12 @@ const MomentsSection = () => {
               lifetime, we want to be there to capture every single moment.
             </p>
             <div className="flex justify-start">
-              <button type="button" className="bg-transparent border-none p-0">
-                <img
-                  onClick={handleWhatsAppNav}
-                  src={button}
-                  alt="btn"
-                  className="w-auto h-12 sm:h-16 lg:h-20"
-                />
+              <button
+                type="button"
+                onClick={handleWhatsAppNav}
+                className="bg-black text-white w-72 h-20 px-10 sm:px-10 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                Get Started
               </button>
             </div>
           </div>

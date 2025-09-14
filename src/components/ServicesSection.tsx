@@ -29,11 +29,11 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-20 bg-gray-50">
+    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-20 bg-gray-200">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left sm:text-center text-gray-900 mb-8 sm:mb-12 lg:mb-16">
-          <span className="block sm:hidden">Why Choose us</span>
-          <span className="hidden sm:block">Why Choose us</span>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-left sm:text-center text-gray-900 mb-8 sm:mb-12 lg:mb-16">
+          <span className="block sm:hidden">Why Choose us?</span>
+          <span className="hidden sm:block">Why Choose us?</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (

@@ -43,7 +43,7 @@ const CTASection = () => {
       <div className="max-w-7xl mx-auto">
         <div
           ref={ctaRef}
-          className="cta text-white flex flex-col p-6 sm:p-8 lg:p-12 rounded-2xl"
+          className="cta bg-black text-white flex flex-col p-6 sm:p-8 lg:p-12 rounded-2xl"
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-center lg:text-left">
             Get Started With Us
@@ -54,15 +54,14 @@ const CTASection = () => {
           </p>
           <button
             type="button"
-            // ref={btnRef}
             onClick={handleWhatsAppNav}
-            className="gitBtn bg-white flex items-center align-middle gap-3 text-violet-800 hover:bg-gray-100 px-6 sm:px-8 py-3 rounded-full text-sm sm:text-base font-bold transition-colors max-w-44 sm:max-w-48 h-12 sm:h-14 mx-auto lg:mx-0"
+            className="flex items-center justify-evenly border-2 border-black w-64 bg-slate-50 text-black px-8 py-3 sm:px-10 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-slate-200 hover:text-black transition-all duration-1000 hover:scale-105"
           >
             Get In Touch
             <img
               src={Component}
               alt="Component"
-              className="gitBtnIcon w-4 h-4 bg-violet-800 p-1 rounded-full"
+              className="gitBtnIcon w-4 h-4 bg-black p-1 rounded-full"
             />
           </button>
         </div>

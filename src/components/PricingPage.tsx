@@ -19,10 +19,10 @@ const PricingPage = () => {
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
-  const handleWhatsAppNav = () => {
+  const handleWhatsAppNav = (service, packageType) => {
     const phoneNumber = "+2349027104215";
     const message =
-      "Hi there!!! Mr Dotun Ajayi. \nI would like to learn more about your services.";
+      `Hi there!!! Mr Dotun Ajayi. \nI would like to make an enquiry about your: ${service} shoot... ${packageType}.`;
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
       "_blank"
@@ -35,17 +35,17 @@ const PricingPage = () => {
 
   const selectCategory = (categoryId: string) => {
     setActiveCategory(categoryId);
-    setIsMobileSidebarOpen(false); 
+    setIsMobileSidebarOpen(false);
   };
 
   const categories = [
-    { id: "prewedding", name: "Pre-Wedding" },
-    { id: "weddings", name: "Wedding" },
-    { id: "introductions", name: "Introduction" },
-    { id: "maternity", name: "Maternity" },
-    { id: "birthday", name: "Birthday" },
-    { id: "family", name: "Family" },
-    { id: "infant", name: "Infant" },
+    { id: "prewedding", name: "Pre-Wedding Photography" },
+    { id: "weddings", name: "Wedding Photography" },
+    { id: "introductions", name: "Introduction Photography" },
+    { id: "maternity", name: "Maternity Photography" },
+    { id: "birthday", name: "Birthday Photography" },
+    { id: "family", name: "Family Photography" },
+    { id: "infant", name: "Infant Photography" },
   ];
 
   const pricingData = {
@@ -79,7 +79,6 @@ const PricingPage = () => {
           "1 Full frame camera",
           "1 photographer",
           "12*30 synthetic photobook with a box",
-          "With a calendar 14*14 frame",
           "Full Wedding pictures in a Flash Drive",
         ],
       },
@@ -315,8 +314,8 @@ const PricingPage = () => {
                     onClick={() => selectCategory(category.id)}
                     className={`w-full text-left px-4 py-3 hover:bg-gray-100 transition-colors ${
                       activeCategory === category.id
-                        ? "bg-indigo-700 text-white hover:bg-indigo-700"
-                        : "text-gray-700"
+                        ? "bg-black text-white hover:bg-black"
+                        : "text-black hover:bg-black hover:text-white"
                     }`}
                   >
                     {category.name}
@@ -329,8 +328,8 @@ const PricingPage = () => {
 
         <div className="flex">
           {/* Desktop Sidebar */}
-          <div className="hidden lg:block w-64 bg-gray-50 min-h-screen p-6 fixed left-0 top-16 overflow-y-auto">
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Services</h2>
+          <div className="hidden lg:block w-72 bg-gray-50 min-h-screen p-6 fixed left-0 top-16 overflow-y-auto">
+            <h2 className="text-xl font-bold text-black mb-6">Services</h2>
             <nav className="space-y-2">
               {categories.map((category) => (
                 <button
@@ -339,8 +338,8 @@ const PricingPage = () => {
                   onClick={() => setActiveCategory(category.id)}
                   className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${
                     activeCategory === category.id
-                      ? "bg-indigo-700 text-white"
-                      : "text-gray-700 hover:bg-gray-200"
+                      ? "bg-black text-white"
+                      : "text-black hover:bg-black hover:text-white"
                   }`}
                 >
                   {category.name}
@@ -356,7 +355,7 @@ const PricingPage = () => {
               <div className="mb-3">
                 <div className="inline-flex items-center bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl px-4 py-3 shadow-sm hover:shadow-md transition-all duration-300 animate-pulse-subtle">
                   <svg
-                    className="w-3 h-3 text-amber-500 animate-bounce-gentle mr-2 flex-shrink-0"
+                    className="w-3 h-3 text-amber-400 animate-bounce-gentle mr-2 flex-shrink-0"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -368,7 +367,7 @@ const PricingPage = () => {
                   </svg>
                   <span className="text-xs text-amber-700 font-medium">
                     All shoots outside the studio attracts an extra charge of{" "}
-                    <span className="font-bold text-amber-900">₦40,000</span>
+                    <span className="font-bold text-amber-900">₦80,000</span>
                   </span>
                 </div>
               </div>
@@ -382,8 +381,7 @@ const PricingPage = () => {
                   (package_, index) => (
                     <div
                       key={index}
-                      className="rounded-lg p-6 shadow-lg"
-                      style={{ backgroundColor: "rgb(44, 14, 168)" }}
+                      className="rounded-lg p-6 shadow-lg bg-black"
                     >
                       <div className="text-center mb-6">
                         <h3 className="text-xl font-bold text-white mb-2">
@@ -404,7 +402,7 @@ const PricingPage = () => {
                         {package_.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start">
                             <svg
-                              className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"
+                              className="w-5 h-5 text-white mr-3 mt-0.5 flex-shrink-0"
                               fill="currentColor"
                               viewBox="0 0 20 20"
                             >
@@ -422,8 +420,8 @@ const PricingPage = () => {
                       </ul>
 
                       <button
-                        onClick={handleWhatsAppNav}
-                        className="w-full bg-white text-indigo-700 font-semibold py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors"
+                        onClick={handleWhatsAppNav()}
+                        className="w-full bg-white text-black font-semibold py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors"
                       >
                         Make a Reservation
                       </button>

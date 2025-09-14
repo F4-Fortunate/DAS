@@ -6,7 +6,6 @@ import Footer from "./Footer";
 const TermsPage = () => {
   const location = useLocation();
 
-  // Force fresh page load behavior
   useEffect(() => {
     window.scrollTo(0, 0);
     const timer = setTimeout(() => {
@@ -95,7 +94,7 @@ const TermsPage = () => {
               <div
                 key={index}
                 className="rounded-lg p-4 sm:p-6 shadow-lg"
-                style={{ backgroundColor: "rgb(44, 14, 168)" }}
+                style={{ backgroundColor: "rgb(0, 0, 0)" }}
               >
                 <h2 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">
                   {term.title}

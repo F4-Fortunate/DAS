@@ -1,13 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import btn from "../images/Frame 11.svg";
-
+import Component from "../images/Vector 1.svg";
+import { handleInstagramNav } from "../utils/util";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleInstagramNav = () => {
-    window.open("https://instagram.com/direct/new/", "_blank");
-  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,7 +20,7 @@ const Header = () => {
         <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-8">
           <Link
             to="/"
-            className="text-lg sm:text-xl font-bold text-gray-900 hover:text-violet-800 transition-colors"
+            className="text-lg sm:text-xl font-bold text-black hover:text-gray-800 transition-colors"
             onClick={closeMenu}
           >
             <span className="hidden sm:inline">DotunAjayiStudios</span>
@@ -34,16 +31,22 @@ const Header = () => {
           <nav className="hidden lg:flex items-center space-x-6">
             <Link
               to="/pricing"
-              className="text-sm font-medium text-gray-700 hover:text-violet-800 transition-colors"
+              className="text-sm font-medium text-black hover:text-gray-800 transition-colors"
             >
-              Pricing/Services
+              Services
             </Link>
             <Link
               to="/terms"
-              className="text-sm font-medium text-gray-700 hover:text-violet-800 transition-colors"
+              className="text-sm font-medium text-black hover:text-gray-800 transition-colors"
             >
               Terms & Conditions
             </Link>
+            {/* <Link
+              to="/faq"
+              className="text-sm font-medium text-black hover:text-gray-800 transition-colors"
+            >
+              FAQs
+            </Link> */}
           </nav>
         </div>
 
@@ -52,7 +55,7 @@ const Header = () => {
           <button
             type="button"
             onClick={toggleMenu}
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:text-violet-800 hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-2 rounded-md text-black hover:text-gray-800 hover:bg-gray-100 transition-colors"
           >
             <svg
               className="w-6 h-6"
@@ -77,10 +80,18 @@ const Header = () => {
               )}
             </svg>
           </button>
-
-          <a href="#" onClick={handleInstagramNav}>
-            <img src={btn} alt="btn" className="w-auto h-8 sm:h-11" />
-          </a>
+          <button
+            type="button"
+            onClick={handleInstagramNav}
+            className="flex items-center justify-between gap-2 border-2 border-black w-40 bg-slate-50 text-black px-3 py-3 sm:px-7 sm:py-4 rounded-lg font-semibold text-base sm:text-sm hover:bg-slate-200 hover:text-black transition-all duration-1000 hover:scale-105"
+          >
+            Contact Us
+            <img
+              src={Component}
+              alt="Component"
+              className="gitBtnIcon w-4 h-4 bg-black p-1 rounded-full"
+            />
+          </button>
         </div>
       </div>
 
@@ -90,18 +101,25 @@ const Header = () => {
           <nav className="px-4 py-4 space-y-3">
             <Link
               to="/pricing"
-              className="block text-sm font-medium text-gray-700 hover:text-violet-800 transition-colors py-2"
+              className="block text-sm font-medium text-black hover:text-gray-800 transition-colors py-2"
               onClick={closeMenu}
             >
-              Pricing/Services
+              Services
             </Link>
             <Link
               to="/terms"
-              className="block text-sm font-medium text-gray-700 hover:text-violet-800 transition-colors py-2"
+              className="block text-sm font-medium text-black hover:text-gray-800 transition-colors py-2"
               onClick={closeMenu}
             >
               Terms & Conditions
             </Link>
+            {/* <Link
+              to="/faq"
+              className="block text-sm font-medium text-black hover:text-gray-800 transition-colors py-2"
+              onClick={closeMenu}
+            >
+              FAQs
+            </Link> */}
           </nav>
         </div>
       )}
