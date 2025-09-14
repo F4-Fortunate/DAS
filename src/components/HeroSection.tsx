@@ -12,8 +12,8 @@ const HeroSection = () => {
     <section className="pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-20 bg-gray-200">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-          <div className="space-y-6 sm:space-y-8">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight text-left">
+          <div className="space-y-6 sm:space-y-8 items-center text-center md:items-center md:text-center lg:items-start lg:text-left">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight">
               <span className="block sm:hidden">
                 Capturing Life's
                 <br />
@@ -34,11 +34,13 @@ const HeroSection = () => {
                 Moments
               </span>
             </h1>
-            <p className="text-base sm:text-lg text-black max-w-lg text-left">
+
+            <p className="text-base sm:text-lg text-black max-w-lg mx-auto lg:mx-0">
               Every moment has a story to tell, and we're here to turn fleeting
               moments into lasting stories
             </p>
-            <div className="flex justify-start">
+
+            <div className="flex justify-center lg:justify-start">
               <button
                 type="button"
                 onClick={handleInstagramNav}
@@ -48,6 +50,7 @@ const HeroSection = () => {
               </button>
             </div>
           </div>
+
           <div className="space-y-4 sm:space-y-6 mt-8 lg:mt-0">
             <div className="grid grid-cols-2 gap-3 sm:gap-4 overflow-hidden">
               <img

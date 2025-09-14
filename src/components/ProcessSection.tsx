@@ -5,8 +5,8 @@ import {handleWhatsAppNav} from "../utils/util"
 const ProcessSection = () => {
 
   return (
-    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-20 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-20 bg-white items-center text-center md:items-center md:text-center lg:items-start lg:text-left">
+      <div className="max-w-7xl mx-auto ">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="order-2 lg:order-1">
             <img
@@ -15,9 +15,9 @@ const ProcessSection = () => {
               className="w-full h-auto max-w-md sm:max-w-lg lg:max-w-full mx-auto lg:mx-0 grayscale rounded-xl"
             />
           </div>
-          <div className="space-y-12 order-1 lg:order-2 mt-0">
+          <div className="space-y-12 order-1 lg:order-2 mt-0 text-center lg:text-left">
             <div className="space-y-8">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tighttext-left">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight">
                 <span className="block sm:hidden">How we make it happen</span>
                 <span className="hidden sm:block">
                   How we make it
@@ -25,7 +25,8 @@ const ProcessSection = () => {
                   happen...
                 </span>
               </h2>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-left">
+
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 From the quiet in–between moments to the big celebrations, we
                 focus on telling your story as it naturally unfolds...
                 <br />
@@ -35,16 +36,7 @@ const ProcessSection = () => {
               </p>
             </div>
 
-            <div className="flex justify-start mt-8">
-              {/* <button type="button" className="bg-transparent border-none p-0">
-                <img
-                  onClick={handleWhatsAppNav}
-                  src={button}
-                  alt="btn"
-                  className="w-auto h-12 sm:h-14 lg:h-16"
-                />
-              </button> */}
-
+            <div className="flex justify-center lg:justify-start mt-8">
               <button
                 type="button"
                 onClick={handleWhatsAppNav}

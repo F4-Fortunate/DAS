@@ -7,29 +7,31 @@ const NewHeroSection = () => {
     navigate("/pricing");
   };
 
-  const handleContactUs = () => {
-    const phoneNumber = "+2349027104215";
-    const message =
-      "Hi there!!! Mr Dotun Ajayi. \nI would like to learn more about your services.";
-    window.open(
-      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
-  };
+  // const handleContactUs = () => {
+  //   const phoneNumber = "+2349027104215";
+  //   const message =
+  //     "Hi there!!! Mr Dotun Ajayi. \nI would like to learn more about your services.";
+  //   window.open(
+  //     `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+  //     "_blank"
+  //   );
+  // };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-28 md:pt-32 lg:pt-36 xl:pt-40 2xl:pt-0 pb-4 sm:pb-2 md:pb-6 lg:pb-6  2xl:pb-0 xl:pb-6">
+    <section
+      className="relative min-h-dvh flex items-center justify-center overflow-hidden 
+  pt-24 sm:pt-28 md:pt-32 lg:pt-36 xl:pt-40 2xl:pt-0 pb-4 sm:pb-2 md:pb-6 lg:pb-8 xl:pb-8 2xl:pb-0"
+    >
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${heroImage})`,
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-10"></div>
       </div>
-
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white mb-6 leading-tight">
           Your Moments, Our Focus
           <br />
           <span className="text-gray-200 ">Captured With Care</span>
@@ -57,12 +59,14 @@ const NewHeroSection = () => {
           </button> */}
         </div>
       </div>
-
-      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce pb-3 flex items-center justify-center justify-self-center">
-        {/* <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+      {/* <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce pb-3 flex items-center justify-center justify-self-center">
+        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
-        </div> */}
+        </div>
         <Camera className="w-12 h-auto text-white flex items-center justify-center justify-self-center" />
+      </div> */}
+      <div className="absolute bottom-2 sm:bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce flex items-center justify-center">
+        <Camera className="w-10 sm:w-12 h-auto text-white" />
       </div>
     </section>
   );

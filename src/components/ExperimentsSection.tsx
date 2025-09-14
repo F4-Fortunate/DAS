@@ -16,9 +16,9 @@ const ExperimentsSection = () => {
               className="w-full h-auto max-w-md sm:max-w-lg lg:max-w-full mx-auto lg:mx-0"
             />
           </div>
-          <div className="space-y-12 sm:space-y-8 order-1 lg:order-2">
+          <div className="space-y-12 sm:space-y-8 order-1 lg:order-2 text-center lg:text-left">
             <div className="space-y-4">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight text-left">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight whitespace-nowrap">
                 <span className="block sm:hidden">
                   Experiments and clients projects.
                 </span>
@@ -28,14 +28,15 @@ const ExperimentsSection = () => {
                   clients projects.
                 </span>
               </h2>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-left">
+
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Whether it's through incorporating film strategies into every
                 creative process or simply incorporating film techniques into
                 every situation. Our approach goes well beyond finding a topic
                 and covering it.
               </p>
             </div>
-            <div className="flex justify-start">
+            <div className="flex justify-center lg:justify-start">
               <button
                 type="button"
                 onClick={handleInstagramNav}
