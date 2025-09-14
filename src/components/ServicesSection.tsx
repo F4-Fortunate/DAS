@@ -26,17 +26,18 @@ const ServicesSection = () => {
 
   return (
     <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-20 bg-gray-200">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-left sm:text-center text-gray-900 mb-8 sm:mb-12 lg:mb-16">
-          <span className="block sm:hidden">Why Choose us?</span>
-          <span className="hidden sm:block">Why Choose us?</span>
+      <div className="max-w-5xl mx-auto flex flex-col items-center justify-center text-center">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-8 sm:mb-12 lg:mb-16">
+          Why Choose us?
         </h2>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
-            <div key={index} className="text-left sm:text-center space-y-4">
-              <div className="flex justify-start sm:justify-center items-center">
-                <service.img className="w-8 h-8 text-yellow-300" />
-              </div>
+            <div
+              key={index}
+              className="flex flex-col items-center text-center space-y-4"
+            >
+              <service.img className="w-8 h-8 text-yellow-300" />
               <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
                 {service.title}
               </h3>

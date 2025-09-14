@@ -72,9 +72,9 @@ const NewHeroSection = () => {
         </div>
 
         <div className="relative z-10 flex-1 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
-          <div className="relative z-10 flex-1 flex flex-col justify-end sm:justify-center items-center px-4 sm:px-6 lg:px-8">
-            <div className="mb-16 sm:mb-12 text-center">
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-serif text-white mb-6 sm:mb-8 tracking-wide">
+          <div className="relative z-10 flex-1 flex flex-col justify-end items-center px-4 sm:px-6 lg:px-8">
+            <div className="mb-7 sm:mb-12 text-center">
+              <h2 className="text-sm sm:text-lg lg:text-2xl font-serif text-white mb-2 sm:mb-2 tracking-wide">
                 {letters}
               </h2>
 

@@ -56,24 +56,24 @@ const HeroSection = () => {
               <img
                 src={imgOne}
                 alt="Portrait 1"
-                className="w-full h-32 sm:h-48 lg:h-60 object-cover rounded-lg"
+                className="w-full h-80 lg:h-80 object-cover rounded-lg"
               />
               <img
                 src={img4}
                 alt="Portrait 2"
-                className="w-full h-32 sm:h-48 lg:h-60 object-cover rounded-lg"
+                className="w-full h-80  lg:h-80 object-cover rounded-lg"
               />
             </div>
             <div className="grid grid-cols-2 gap-3 sm:gap-4 overflow-hidden">
               <img
                 src={img3}
                 alt="Portrait 1"
-                className="w-full h-32 sm:h-48 lg:h-60 object-cover rounded-lg"
+                className="w-full h-80 lg:h-80 object-cover rounded-lg"
               />
               <img
                 src={img2}
                 alt="Portrait 2"
-                className="w-full h-32 sm:h-48 lg:h-60 object-cover rounded-lg"
+                className="w-full h-80 lg:h-80 object-cover rounded-lg"
               />
             </div>
           </div>

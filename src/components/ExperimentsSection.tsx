@@ -18,7 +18,7 @@ const ExperimentsSection = () => {
           </div>
           <div className="space-y-12 sm:space-y-8 order-1 lg:order-2 text-center lg:text-left">
             <div className="space-y-4">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight whitespace-nowrap">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight ">
                 <span className="block sm:hidden">
                   Experiments and clients projects.
                 </span>

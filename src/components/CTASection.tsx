@@ -43,19 +43,19 @@ const CTASection = () => {
       <div className="max-w-7xl mx-auto">
         <div
           ref={ctaRef}
-          className="cta bg-black text-white flex flex-col p-6 sm:p-8 lg:p-12 rounded-2xl"
+          className="cta bg-black text-white flex flex-col p-6 sm:p-8 lg:p-12 rounded-2xl items-center"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight text-left">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight text-center w-full">
             Get Started With Us
           </h2>
-          <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90 max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
+          <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90 max-w-2xl text-center">
             Start your journey today and let us bring your vision to life, with
             expert precision and creativity every step of the way.
           </p>
           <button
             type="button"
             onClick={handleWhatsAppNav}
-            className="flex items-center justify-evenly border-2 border-black w-64 bg-slate-50 text-black px-8 py-3 sm:px-10 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-slate-200 hover:text-black transition-all duration-1000 hover:scale-105"
+            className="flex items-center justify-center sm:justify-evenly border-2 border-black w-64 bg-slate-50 text-black px-8 py-3 sm:px-10 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-slate-200 hover:text-black transition-all duration-1000 hover:scale-105"
           >
             Get In Touch
             <img
