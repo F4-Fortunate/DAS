@@ -80,18 +80,20 @@ const Header = () => {
               )}
             </svg>
           </button>
-          <button
-            type="button"
-            onClick={handleInstagramNav}
-            className="flex items-center justify-between gap-2 border-2 border-black w-40 bg-slate-50 text-black px-3 py-3 sm:px-7 sm:py-4 rounded-lg font-semibold text-base sm:text-sm hover:bg-slate-200 hover:text-black transition-all duration-1000 hover:scale-105"
-          >
-            Contact Us
-            <img
-              src={Component}
-              alt="Component"
-              className="gitBtnIcon w-4 h-4 bg-black p-1 rounded-full"
-            />
-          </button>
+          <div className="hidden lg:block">
+            <button
+              type="button"
+              onClick={handleInstagramNav}
+              className="flex items-center justify-between gap-2 border-2 border-black w-40 bg-slate-50 text-black px-3 py-3 sm:px-7 sm:py-4 rounded-lg font-semibold text-base sm:text-sm hover:bg-slate-200 hover:text-black transition-all duration-1000 hover:scale-105"
+            >
+              Contact Us
+              <img
+                src={Component}
+                alt="Component"
+                className="gitBtnIcon w-4 h-4 bg-black p-1 rounded-full"
+              />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -113,6 +115,16 @@ const Header = () => {
             >
               Terms & Conditions
             </Link>
+            <button
+              type="button"
+              onClick={() => {
+                handleInstagramNav();
+                closeMenu();
+              }}
+              className="block text-sm font-medium text-black hover:text-gray-800 transition-colors py-2"
+            >
+              Contact Us
+            </button>
             {/* <Link
               to="/faq"
               className="block text-sm font-medium text-black hover:text-gray-800 transition-colors py-2"

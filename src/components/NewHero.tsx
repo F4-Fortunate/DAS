@@ -1,11 +1,9 @@
-
 import heroImage from "../images/HeroSection/hero.png";
 import { useNavigate } from "react-router-dom";
 const NewHeroSection = () => {
-
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const handleViewServices = () => {
-    navigate("/pricing")
+    navigate("/pricing");
   };
 
   const handleContactUs = () => {
@@ -19,7 +17,7 @@ const NewHeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-6 2xl:pb-0">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -29,19 +27,18 @@ const NewHeroSection = () => {
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       </div>
 
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
-          Photography With Heart
+          Your Moments, Our Focus
           <br />
-          <span className="text-gray-200 max-w-5xl">Stories Worth Remembering</span>
+          <span className="text-gray-200">Captured With Care</span>
         </h1>
 
         <p className="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-          Professional photography that tells your story with artistry and
-          passion
+          Professional photography that tells your story with premium artistry
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-4 mt-5">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16 mt-5">
           <button
             type="button"
             onClick={handleViewServices}
@@ -60,7 +57,7 @@ const NewHeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce pb-3">
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
         </div>
