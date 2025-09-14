@@ -18,9 +18,9 @@ const NewHeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-28 md:pt-32 lg:pt-36 xl:pt-40 2xl:pt-0 pb-4 sm:pb-6 md:pb-6 lg:pb-6  2xl:pb-0 xl:pb-6">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-28 md:pt-32 lg:pt-36 xl:pt-40 2xl:pt-0 pb-4 sm:pb-2 md:pb-6 lg:pb-6  2xl:pb-0 xl:pb-6">
       <div
-        className="absolute inset-0 bg-contain sm:bg-cover bg-stone-900 bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${heroImage})`,
         }}
@@ -58,11 +58,11 @@ const NewHeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce pb-3">
+      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce pb-3 flex items-center justify-center justify-self-center">
         {/* <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
         </div> */}
-        <Camera className="w-12 h-auto text-white" />
+        <Camera className="w-12 h-auto text-white flex items-center justify-center justify-self-center" />
       </div>
     </section>
   );
