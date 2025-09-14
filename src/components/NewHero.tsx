@@ -1,12 +1,27 @@
 import heroImage from "../images/HeroSection/hero.png";
 import { useNavigate } from "react-router-dom";
 import { Camera } from "lucide-react";
+import heroMobile from "../images/HeroSection/heromobile.png";
 const NewHeroSection = () => {
   const navigate = useNavigate();
   const handleViewServices = () => {
     navigate("/pricing");
   };
 
+   const text = "Capturing Life's Beautiful Moments";
+   const letters = text.split("").map((letter, index) => (
+     <span
+       key={index}
+       className="inline-block animate-letter"
+       style={{
+         animationDelay: `${index * 0.08}s`,
+         animationDuration: "5s",
+         animationIterationCount: "infinite",
+       }}
+     >
+       {letter === " " ? "\u00A0" : letter}
+     </span>
+   ));
   // const handleContactUs = () => {
   //   const phoneNumber = "+2349027104215";
   //   const message =
@@ -18,57 +33,66 @@ const NewHeroSection = () => {
   // };
 
   return (
-    <section
-      className="relative min-h-dvh flex items-center justify-center overflow-hidden 
-  pt-24 sm:pt-28 md:pt-32 lg:pt-36 xl:pt-40 2xl:pt-0 pb-4 sm:pb-2 md:pb-6 lg:pb-8 xl:pb-8 2xl:pb-0"
-    >
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-10"></div>
-      </div>
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white mb-6 leading-tight">
-          Your Moments, Our Focus
-          <br />
-          <span className="text-gray-200 ">Captured With Care</span>
-        </h1>
+    <>
+      <style>{`
+        @keyframes letterSlide {
+          0% {
+            opacity: 0;
+            transform: translateX(-20px);
+          }
+          10%,
+          80% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+          90%,
+          100% {
+            opacity: 0;
+            transform: translateX(20px);
+          }
+        }
+        .animate-letter {
+          animation: letterSlide 5s infinite;
+        }
+      `}</style>
 
-        <p className="text-lg sm:text-4xl lg:text-5xl text-gray-200 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed font-herrVon">
-          Professional photography that tells your story with premium artistry
-        </p>
+      <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-20 sm:pt-24 md:pt-28">
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 bg-no-repeat"
+            style={{
+              backgroundImage: `url(${heroImage})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center center",
+              backgroundColor: "#1a1a1a",
+            }}
+          />
 
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16 mt-5">
-          <button
-            type="button"
-            onClick={handleViewServices}
-            className="bg-white text-black w-72 px-8 py-5 sm:px-10 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-1000 hover:scale-105 shadow-lg"
-          >
-            View Services
-          </button>
-
-          {/* <button
-            type="button"
-            onClick={handleContactUs}
-            className="border-2 border-white text-white px-8 py-3 sm:px-10 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-black transition-all duration-1000 hover:scale-105"
-          >
-            Contact Us
-          </button> */}
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
-      </div>
-      {/* <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce pb-3 flex items-center justify-center justify-self-center">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
+
+        <div className="relative z-10 flex-1 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
+          <div className="relative z-10 flex-1 flex flex-col justify-end sm:justify-center items-center px-4 sm:px-6 lg:px-8">
+            <div className="mb-16 sm:mb-12 text-center">
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-serif text-white mb-6 sm:mb-8 tracking-wide">
+                {letters}
+              </h2>
+
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+                <button
+                  type="button"
+                  onClick={handleViewServices}
+                  className="border-2 border-white text-white px-8 py-3 sm:px-10 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 flex items-center gap-3"
+                >
+                  View Services
+                  <Camera className="w-5 h-5 animate-bounce" />
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <Camera className="w-12 h-auto text-white flex items-center justify-center justify-self-center" />
-      </div> */}
-      <div className="absolute bottom-2 sm:bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce flex items-center justify-center">
-        <Camera className="w-10 sm:w-12 h-auto text-white" />
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
