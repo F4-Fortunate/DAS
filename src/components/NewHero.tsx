@@ -56,7 +56,12 @@ const NewHeroSection = () => {
         }
       `}</style>
 
-      <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-20 sm:pt-24 md:pt-28">
+      <section
+        className="relative flex flex-col justify-between overflow-hidden pt-20 sm:pt-24 md:pt-28"
+        style={{
+          height: window.innerWidth < 640 ? "75vh" : "100vh",
+        }}
+      >
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-no-repeat bg-center"
@@ -76,8 +81,11 @@ const NewHeroSection = () => {
 
         <div className="relative z-10 flex-1 flex flex-col justify-end lg:justify-end items-center px-4 sm:px-6 lg:px-8">
           <div
-            className="mb-16 sm:mb-7 lg:mb-23 text-center"
-            style={{ marginTop: "5px" }}
+            className="text-center"
+            style={{
+              marginBottom: window.innerWidth < 640 ? "2rem" : "4rem",
+              marginTop: "5px",
+            }}
           >
             <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-serif text-white mb-8 sm:mb-10 md:mb-12 tracking-wide leading-relaxed">
               {letters}
