@@ -22,15 +22,7 @@ const NewHeroSection = () => {
       {letter === " " ? "\u00A0" : letter}
     </span>
   ));
-  // const handleContactUs = () => {
-  //   const phoneNumber = "+2349027104215";
-  //   const message =
-  //     "Hi there!!! Mr Dotun Ajayi. \nI would like to learn more about your services.";
-  //   window.open(
-  //     `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
-  //     "_blank"
-  //   );
-  // };
+;
 
   return (
     <>
@@ -67,7 +59,7 @@ const NewHeroSection = () => {
             className="absolute inset-0 bg-no-repeat bg-center xl:bg-cover lg:bg-cover max-lg:bg-cover "
             style={{
               backgroundImage: `url(${heroImage})`,
-              backgroundColor: "#1f1f1f",
+              backgroundColor: "#1a1a1c",
               backgroundSize:
                 window.innerWidth < 640
                   ? "180%"
@@ -76,7 +68,14 @@ const NewHeroSection = () => {
                   : "contain",
             }}
           />
-          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div
+            className="absolute inset-0 opacity-40"
+            style={{
+              background:
+                "linear-gradient(to bottom, transparent 0%, transparent 70%, rgba(26, 26, 28, 1) 100%)",
+            }}
+          ></div>
         </div>
 
         <div className="relative z-10 flex-1 flex flex-col justify-end lg:justify-end items-center px-4 sm:px-6 lg:px-8">

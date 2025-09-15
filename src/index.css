@@ -147,15 +147,7 @@ html {
   background-color: rgba(var(--purple-rgb));
 }
 
-/* .header-btn {
-  border-color: rgb(44, 14, 168);
-  border: 2px solid rgb(44, 14, 168);
-  color: rgb(44, 14, 168);
-  font-size: 0.7rem;
-} */
-
 .cta {
-  /* background-color: rgb(44, 14, 168); */
   border-radius: 40px;
   height: 28.5rem;
   justify-content: center;
@@ -165,36 +157,26 @@ html {
 .gitBtn {
   transition: all 0.5s ease-in-out;
   background-color: rgb(245, 245, 255);
-  /* color: rgb(44, 14, 168); */
 }
 
-.gitBtnIcon {
-  /* background-color: rgb(44, 14, 168); */
-}
 .gitBtn:hover {
-  /* background-color: rgb(44, 14, 168) !important;
-  color: white; */
   border: 1px solid rgb(106, 106, 107);
   scale: 1.02;
 }
 
 .vmBtn {
   transition: all 0.5s ease-in-out;
-  /* background-color: rgb(44, 14, 168); */
   color: rgb(245, 245, 255);
 }
 
 .vmBtn:hover {
-  /* background-color: rgb(44, 14, 168) !important;
-  color: white; */
+
   border: 1px solid rgb(131, 131, 131);
   scale: 1.02;
-  /* color: rgb(44, 14, 168); */
 }
 
 .gitImgHover {
   background-color: rgb(251, 251, 251);
-  color: rgb(44, 14, 168);
   transition: all 0.5s ease-in-out;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
 }
@@ -223,6 +205,7 @@ h2 {
   object-fit: cover;
   border-radius: 0.5rem;
 }
+
 
 .imgbtn:hover {
   transform: scale(1.05);
