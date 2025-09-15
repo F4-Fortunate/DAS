@@ -50,7 +50,7 @@ const PortfolioSection = () => {
     <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-20 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-gray-900 leading-tight mb-4 sm:text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-gray-900 leading-tight mb-4 text-center">
             Our Awesome Works
           </h2>
           <p className="text-gray-600 text-sm sm:text-base">
