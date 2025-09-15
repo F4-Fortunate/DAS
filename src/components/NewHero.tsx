@@ -59,35 +59,39 @@ const NewHeroSection = () => {
       <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-20 sm:pt-24 md:pt-28">
         <div className="absolute inset-0">
           <div
-            className="absolute inset-0 bg-no-repeat"
+            className="absolute inset-0 bg-no-repeat bg-center"
             style={{
               backgroundImage: `url(${heroImage})`,
-              backgroundSize: "contain",
-              backgroundPosition: "center center",
-              backgroundColor: "#1a1a1a",
+              backgroundColor: "#1f1f1f",
+              backgroundSize:
+                window.innerWidth < 640
+                  ? "200%"
+                  : window.innerWidth < 1024
+                  ? "150%"
+                  : "contain",
             }}
           />
-
           <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
 
-        <div className="relative z-10 flex-1 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
-          <div className="relative z-10 flex-1 flex flex-col justify-end items-center px-4 sm:px-6 lg:px-8">
-            <div className="mb-7 sm:mb-12 text-center">
-              <h2 className="text-sm sm:text-lg lg:text-2xl font-serif text-white mb-2 sm:mb-2 tracking-wide">
-                {letters}
-              </h2>
+        <div className="relative z-10 flex-1 flex flex-col justify-end lg:justify-end items-center px-4 sm:px-6 lg:px-8">
+          <div
+            className="mb-16 sm:mb-7 lg:mb-23 text-center"
+            style={{ marginTop: "5px" }}
+          >
+            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-serif text-white mb-8 sm:mb-10 md:mb-12 tracking-wide leading-relaxed">
+              {letters}
+            </h2>
 
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-                <button
-                  type="button"
-                  onClick={handleViewServices}
-                  className="border-2 border-white text-white px-8 py-3 sm:px-10 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 flex items-center gap-3"
-                >
-                  View Services
-                  <Camera className="w-5 h-5 animate-bounce" />
-                </button>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+              <button
+                type="button"
+                onClick={handleViewServices}
+                className="border-2 border-white text-white px-6 py-2.5 sm:px-8 sm:py-3 md:px-10 md:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 flex items-center gap-3"
+              >
+                View Services
+                <Camera className="w-4 h-4 sm:w-5 sm:h-5 animate-bounce" />
+              </button>
             </div>
           </div>
         </div>
