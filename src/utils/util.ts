@@ -11,5 +11,5 @@ export const handleWhatsAppNav = () => {
 
 
   export const handleInstagramNav = () => {
-    window.open("https://instagram.com/direct/new/", "_blank");
+    window.open("https://instagram.com/dotunajayistudios", "_blank");
   };

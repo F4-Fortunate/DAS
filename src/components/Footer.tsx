@@ -11,12 +11,12 @@ const Footer = () => {
               DotunAjayi Studios • {new Date().getFullYear()}
             </span>
             <span className="sm:hidden">
-              DA Studios • {new Date().getFullYear()}
+              DotunAjayi Studios • {new Date().getFullYear()}
             </span>
           </div>
           <div className="flex space-x-4 sm:space-x-6">
             <a
-              href="https://facebook.com"
+              href="https://facebook.com/DotunAjayiStudios"
               target="_blank"
               rel="noopener noreferrer"
               className=" hover:text-purple-400 transition-colors"
@@ -24,7 +24,7 @@ const Footer = () => {
               <Facebook className="w-5 h-5" />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://twitter.com/DotungAjayiStudios"
               target="_blank"
               rel="noopener noreferrer"
               className=" hover:text-purple-400 transition-colors"
@@ -32,7 +32,7 @@ const Footer = () => {
               <Twitter className="w-5 h-5" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/dotunajayistudios"
               target="_blank"
               rel="noopener noreferrer"
               className=" hover:text-purple-400 transition-colors"
