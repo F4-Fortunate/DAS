@@ -59,7 +59,7 @@ const NewHeroSection = () => {
       <section
         className="relative flex flex-col justify-between overflow-hidden pt-20 sm:pt-24 md:pt-28"
         style={{
-          height: window.innerWidth < 640 ? "75vh" : "100vh",
+          height: window.innerWidth < 640 ? "80vh" : "100vh",
         }}
       >
         <div className="absolute inset-0">
