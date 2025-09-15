@@ -325,35 +325,37 @@ const PricingPage = () => {
           )}
         </div>
 
-        <div className="flex">
-          {/* Desktop Sidebar */}
-          <div className="hidden lg:block w-72 bg-gray-50 min-h-screen p-6 fixed left-0 top-16 overflow-y-auto">
-            <h2 className="text-xl font-bold text-black mb-6">Services</h2>
-            <nav className="space-y-2">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  type="button"
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${
-                    activeCategory === category.id
-                      ? "bg-black text-white"
-                      : "text-black hover:bg-black hover:text-white"
-                  }`}
-                >
-                  {category.name}
-                </button>
-              ))}
-            </nav>
-          </div>
+        {/* Main Container  */}
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex">
+            {/* Desktop Sidebar  */}
+            <div className="hidden lg:block w-72 bg-gray-50 min-h-screen p-6 sticky top-20 h-fit">
+              <h2 className="text-xl font-bold text-black mb-6">Services</h2>
+              <nav className="space-y-2">
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    type="button"
+                    onClick={() => setActiveCategory(category.id)}
+                    className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${
+                      activeCategory === category.id
+                        ? "bg-black text-white"
+                        : "text-black hover:bg-black hover:text-white"
+                    }`}
+                  >
+                    {category.name}
+                  </button>
+                ))}
+              </nav>
+            </div>
 
-          <div className="flex-1 lg:ml-64 p-4 sm:p-6 lg:p-1 lg:px-8 min-h-screen lg:min-h-[calc(100vh-5rem)]">
-            <div className="max-w-6xl mx-auto">
+            {/* Content Area */}
+            <div className="flex-1 lg:pl-8 p-4 sm:p-6 lg:p-6">
               <div className="mb-3">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3  rounded-xl px-4 py-3 shadow-sm hover:shadow-md transition-all duration-300 animate-pulse-subtle">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 rounded-xl px-4 py-3 transition-all duration-300 animate-pulse-subtle">
                   <div className="flex items-center rounded-xl px-4 py-3 shadow-sm hover:shadow-md transition-all duration-300 animate-pulse-subtle bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200">
                     <svg
-                      className="w-3 h-3 text-amber-400 animate-bounce-gentle mr-2 flex-shrink-0 "
+                      className="w-3 h-3 text-amber-400 animate-bounce-gentle mr-2 flex-shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -369,27 +371,46 @@ const PricingPage = () => {
                     </span>
                   </div>
 
-                  <button
-                    onClick={() =>
-                      window.open("#", "_blank")
-                    }
-                    className="flex items-center gap-2 bg-black hover:bg-gray-950- text-white text-xs font-medium px-3 py-2 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md flex-shrink-0"
-                  >
-                    <svg
-                      className="w-3 h-3"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                  <div className="grid sm:flex gap-2">
+                    <button
+                      onClick={() => window.open("#", "_blank")}
+                      className="flex items-center gap-2 bg-black hover:bg-gray-950- text-white text-xs font-medium px-3 py-3 max-w-64 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md flex-shrink-0"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                      />
-                    </svg>
-                    Download PDF Guide
-                  </button>
+                      <svg
+                        className="w-3 h-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                        />
+                      </svg>
+                      Portraits Pricing Guide
+                    </button>
+                    <button
+                      onClick={() => window.open("#", "_blank")}
+                      className="flex items-center gap-2 bg-black hover:bg-gray-950- text-white text-xs font-medium max-w-64 px-3 py-4 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md flex-shrink-0"
+                    >
+                      <svg
+                        className="w-3 h-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                        />
+                      </svg>
+                      Weddings Pricing Guide
+                    </button>
+                  </div>
                 </div>
               </div>
 
