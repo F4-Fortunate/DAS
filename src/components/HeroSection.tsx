@@ -9,7 +9,7 @@ const HeroSection = () => {
     window.open("https://instagram.com/direct/new/", "_blank");
   };
   return (
-    <section className="pt-20 sm:pt-20 lg:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-20 bg-gray-200">
+    <section className="pt-20 sm:pt-15 lg:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-20 bg-gray-200">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="space-y-6 sm:space-y-8 items-center text-center md:items-center md:text-center lg:items-start lg:text-left">

@@ -8,20 +8,20 @@ const NewHeroSection = () => {
     navigate("/pricing");
   };
 
-   const text = "Capturing Life's Beautiful Moments";
-   const letters = text.split("").map((letter, index) => (
-     <span
-       key={index}
-       className="inline-block animate-letter"
-       style={{
-         animationDelay: `${index * 0.08}s`,
-         animationDuration: "5s",
-         animationIterationCount: "infinite",
-       }}
-     >
-       {letter === " " ? "\u00A0" : letter}
-     </span>
-   ));
+  const text = "Dotun Ajayi Studios";
+  const letters = text.split("").map((letter, index) => (
+    <span
+      key={index}
+      className="inline-block animate-letter"
+      style={{
+        animationDelay: `${index * 0.08}s`,
+        animationDuration: "5s",
+        animationIterationCount: "infinite",
+      }}
+    >
+      {letter === " " ? "\u00A0" : letter}
+    </span>
+  ));
   // const handleContactUs = () => {
   //   const phoneNumber = "+2349027104215";
   //   const message =
@@ -64,13 +64,13 @@ const NewHeroSection = () => {
       >
         <div className="absolute inset-0">
           <div
-            className="absolute inset-0 bg-no-repeat bg-center"
+            className="absolute inset-0 bg-no-repeat bg-center xl:bg-cover lg:bg-cover max-lg:bg-cover "
             style={{
               backgroundImage: `url(${heroImage})`,
               backgroundColor: "#1f1f1f",
               backgroundSize:
                 window.innerWidth < 640
-                  ? "200%"
+                  ? "180%"
                   : window.innerWidth < 1024
                   ? "150%"
                   : "contain",
@@ -87,7 +87,7 @@ const NewHeroSection = () => {
               marginTop: "5px",
             }}
           >
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-serif text-white mb-8 sm:mb-10 md:mb-12 tracking-wide leading-relaxed">
+            <h2 className="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif text-white mb-8 sm:mb-10 md:mb-12 tracking-wide leading-relaxed">
               {letters}
             </h2>
 
