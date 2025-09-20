@@ -25,7 +25,7 @@ const NewHeroSection = () => {
 
   return (
     <>
-      <style jsx>{`
+      <style>{`
         @keyframes letterSlide {
           0% {
             opacity: 0;
@@ -118,7 +118,7 @@ const NewHeroSection = () => {
               <button
                 type="button"
                 onClick={handleViewServices}
-                className="border-2 border-white text-white px-6 py-2.5 sm:px-8 sm:py-3 md:px-10 md:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 flex items-center gap-3"
+                className="border-2 border-white text-white px-6 py-2.5 sm:px-8 sm:py-3 md:px-10 md:py-4 rounded-lg font-semibold text-sm sm:text-base md:text-lg hover:bg-white hover:text-black transition-all duration-400 hover:scale-105 flex items-center gap-3"
               >
                 View Services
                 <Camera className="w-4 h-4 sm:w-5 sm:h-5 animate-bounce" />
