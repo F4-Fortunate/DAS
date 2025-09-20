@@ -14,19 +14,18 @@ const NewHeroSection = () => {
       key={index}
       className="inline-block animate-letter"
       style={{
-        animationDelay: `${index * 0.08}s`,
-        animationDuration: "5s",
+        animationDelay: `${index * 0.05}s`,
+        animationDuration: "3s",
         animationIterationCount: "infinite",
       }}
     >
       {letter === " " ? "\u00A0" : letter}
     </span>
   ));
-;
 
   return (
     <>
-      <style>{`
+      <style jsx>{`
         @keyframes letterSlide {
           0% {
             opacity: 0;
@@ -44,53 +43,78 @@ const NewHeroSection = () => {
           }
         }
         .animate-letter {
-          animation: letterSlide 5s infinite;
+          animation: letterSlide 3s infinite;
+        }
+
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+        .hero-section {
+          animation: fadeIn 0.8s ease-out;
+        }
+
+        .hero-content {
+          animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-button {
+          animation: fadeInUp 0.8s ease-out 0.4s both;
         }
       `}</style>
 
       <section
-        className="relative flex flex-col justify-between overflow-hidden pt-20 sm:pt-24 md:pt-28"
+        className="hero-section relative flex flex-col justify-between overflow-hidden pt-20 sm:pt-24 md:pt-28"
         style={{
-          height: window.innerWidth < 640 ? "80vh" : "100vh",
+          height: window.innerWidth < 640 ? "75vh" : "100vh",
         }}
       >
         <div className="absolute inset-0">
           <div
-            className="absolute inset-0 bg-no-repeat bg-center xl:bg-cover lg:bg-cover max-lg:bg-cover "
+            className="absolute inset-0 bg-no-repeat bg-center"
             style={{
               backgroundImage: `url(${heroImage})`,
-              backgroundColor: "#1a1a1c",
+              backgroundColor: "#1f1f1f",
               backgroundSize:
                 window.innerWidth < 640
-                  ? "180%"
+                  ? "200%"
                   : window.innerWidth < 1024
                   ? "150%"
                   : "contain",
             }}
           />
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-          <div
-            className="absolute inset-0 opacity-40"
-            style={{
-              background:
-                "linear-gradient(to bottom, transparent 0%, transparent 70%, rgba(26, 26, 28, 1) 100%)",
-            }}
-          ></div>
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
 
         <div className="relative z-10 flex-1 flex flex-col justify-end lg:justify-end items-center px-4 sm:px-6 lg:px-8">
           <div
-            className="text-center"
+            className="hero-content text-center"
             style={{
               marginBottom: window.innerWidth < 640 ? "2rem" : "4rem",
               marginTop: "5px",
             }}
           >
-            <h2 className="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif text-white mb-8 sm:mb-10 md:mb-12 tracking-wide leading-relaxed">
+            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-serif text-white mb-8 sm:mb-10 md:mb-12 tracking-wide leading-relaxed">
               {letters}
             </h2>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+            <div className="hero-button flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               <button
                 type="button"
                 onClick={handleViewServices}
@@ -105,6 +129,5 @@ const NewHeroSection = () => {
       </section>
     </>
   );
-};
-
+}
 export default NewHeroSection;

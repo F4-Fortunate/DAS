@@ -373,7 +373,12 @@ const PricingPage = () => {
 
                   <div className="grid sm:flex gap-2">
                     <button
-                      onClick={() => window.open("#", "_blank")}
+                      onClick={() =>
+                        window.open(
+                          "https://drive.google.com/file/d/1Vq3aZi39-22ZgK5c9lQ-Nm6KqMVe6NQu/view?usp=drivesdk",
+                          "_blank"
+                        )
+                      }
                       className="flex items-center gap-2 bg-black hover:bg-gray-950- text-white text-xs font-medium px-3 py-3 max-w-64 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md flex-shrink-0"
                     >
                       <svg
@@ -392,7 +397,12 @@ const PricingPage = () => {
                       Portraits Pricing Guide
                     </button>
                     <button
-                      onClick={() => window.open("#", "_blank")}
+                      onClick={() =>
+                        window.open(
+                          "https://drive.google.com/file/d/17k7srSo1QL0eU-5Gj5Yafz7yT-rkbZHq/view?usp=drivesdk",
+                          "_blank"
+                        )
+                      }
                       className="flex items-center gap-2 bg-black hover:bg-gray-950- text-white text-xs font-medium max-w-64 px-3 py-4 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md flex-shrink-0"
                     >
                       <svg
